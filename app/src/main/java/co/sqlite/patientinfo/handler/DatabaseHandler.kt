@@ -30,7 +30,6 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context,
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        //  TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
         db!!.execSQL("DROP TABLE IF EXISTS " + TABLE_CONTACTS)
         onCreate(db)
     }
